@@ -1,0 +1,20 @@
+body {
+	background: #3E424A; /*#3E424A*/
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	font: 16px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+}
+
+.container {
+	background: #E6E6E6;
+	border: none;
+	border-radius: 15px;
+	width: 720px;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+i {
+	background-color: brown;
+}

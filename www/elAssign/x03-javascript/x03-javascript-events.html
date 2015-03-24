@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <title>Javascript Events</title>
+    <style>
+        body{
+            font-family: helvetica;
+            background: url('../../background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .instructions{
+            background: RGBA(140,150,140,0.5);
+            text-align: center;
+            padding: 3px;
+            width: 400px;
+            border-radius: 20px;
+            margin: 0 auto;
+            font-size: 10px;
+        }
+    </style>
+    <script>
+        document.myX = 40;
+    
+        function moveVer(a){
+            document.getElementById('myOut').style.top = parseInt(document.getElementById('myOut').style.top) - a + 'px';
+        }
+        
+        function moveHor(a){
+            document.getElementById('myOut').style.left = parseInt(document.getElementById('myOut').style.left) - a + 'px';
+        }
+    </script>
+</head>
+
+<body onkeyDown= "{
+  if(string.fromCharCode(event.keyCode)=='A'){
+      getElementById('myOut').style.left = parseInt(getElementById('myOut').style.left) + 10 + 'px'
+  }
+}">
+
+<h1 align=center>Basic Javascript Events by Dakaro</h1>
+
+
+<div style='text-align: center'>Note: Tap the capital "A" to see the object move!</div>
+
+<div class="instructions">
+</h3>Instructions</h3><br>
+Pass: Add to this page several links to websites that have information about javascript events. <br>
+Good: Add something on this page that activates for every possible javascript event. <br>
+Note: identify if events only work on touch screen computers.
+</div><br>
+
+<div id="myOut" style="position:absolute; left:500px; top:100px;">Move me</div><br><br>
+
+<table style="text-align: center;" border=1>
+    <tr>
+        <td></td><td><input type=button value="Up" onclick="{ moveVer(20) }"><br></td><td></td>
+    </tr>
+    <tr>
+        <td><input type=button value="Left" onclick="{ moveHor(20) }"></td><td><b onMouseOver = "{ getElementById('myOut').innerHTML +=' Move me, ' }"> Copy </b></td><td><input type=button value="Right" onclick="{ moveHor(-20) }"></td>
+    </tr>
+    <tr>
+        <td></td><td><input type=button value="Down" onclick="{ moveVer(-20) }"><br></td><td></td>
+    </tr>
+</table>
+
+<br><input type=button value="Back" style="font-size:25px" onclick="{window.history.back()}"><br><br>

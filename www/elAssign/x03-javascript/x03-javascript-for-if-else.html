@@ -1,0 +1,73 @@
+<head>
+     <title>For If and Else</title>
+     <style>
+          body{
+               font-family: helvetica;
+               background: url('../../background.jpg');
+               background-size: cover;
+               background-position: center;
+               background-attachment: fixed;
+               text-align: center;
+          }
+          .instructions{
+               background: RGBA(140,150,140,0.5);
+               padding: 3px;
+               width: 230px;
+               border-radius: 20px;
+               margin: 0 auto;
+               font-size: 10px;
+          }
+          #myOut {
+               width: 50%;
+               margin: 0 auto;
+               text-align: left;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="instructions">
+          <b> Instructions</b> <br>
+          Use this for loop to improve the output. <br>
+     </div>
+</body>
+<br>
+Enter your age: 
+<input type=text id="myIn" value=20>
+<input type=button value="Solve" onClick="{
+myTemp=''
+
+for (myLoop=1; myLoop <= document.all.myIn.value; myLoop++){
+     myTemp+='<br> At age '+myLoop
+     if(myLoop == 1){myTemp += ' You were a baby'}
+     if(myLoop == 2){myTemp += ' You probably learned to walk or begin crawling'}
+     if(myLoop == 3){myTemp += ' You have begun talking even if it\'s inaudiable'}
+     if(myLoop == 4){myTemp += ' You\'re getting up there and close to school. '}
+     if(myLoop == 5){myTemp += ' If you were gifted or mature you began kindergarden'}
+     if(myLoop == 6){myTemp += ' You have at least begun some form of Education'}
+     if(myLoop == 7){myTemp += ' '}
+     if(myLoop == 8){myTemp += ' '}
+     if(myLoop == 9){myTemp += ' '}
+     if(myLoop == 10){myTemp += ' '}
+     if(myLoop == 11){myTemp += ' You became a tween'}
+     if(myLoop == 12){myTemp += ' '}
+     if(myLoop == 13){myTemp += ' '}
+     if(myLoop == 14){myTemp += ' '}
+     if(myLoop == 15){myTemp += ' '}
+     if(myLoop == 16){myTemp += ' '}
+     if(myLoop == 17){myTemp += ' '}
+     if(myLoop == 18){myTemp += ' '}
+     if(myLoop == 19){myTemp += ' '}
+     if(myLoop == 20){myTemp += ' '}
+     if(myLoop == 21){myTemp += ' '}
+     if(myLoop == 22){myTemp += ' '}
+}
+
+getElementById('myOut').innerHTML = myTemp
+}">
+
+<div id="myOut"></div>
+
+
+
+<input type=button value="Back" style="font-size:25px" onclick="{window.history.back()}"><br><br>

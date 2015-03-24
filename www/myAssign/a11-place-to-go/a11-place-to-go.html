@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <title>Keelung, Taiwan.</title>
+    <style>
+        body{
+            font-family:verdana
+        }
+        .background-image {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 1;
+
+            display: block;
+            background-image: url(keelung.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+
+            -webkit-filter: blur(10px);
+            -moz-filter: blur(10px);
+            -o-filter: blur(10px);
+            -ms-filter: blur(10px);
+            filter: blur(10px);
+        }
+
+        .content {
+            position: fixed;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            margin: 0 auto;
+            text-align: center;
+            background: RGBA(140,150,140,0.7);
+            border-radius: 10px;
+            padding: 5px;
+            width: 50%;
+        }
+        
+        table {
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        
+    </script>
+</head>
+
+<body>
+    <div class="background-image"></div>
+    <div class="content" >
+        <p>I want to go to Keelung, Taiwan.</p>
+        <img src="keelung.jpg" style="width:30%; height:30%;">
+        <p>Keelung is officially known as Keelung City and is a major port city in the northeast of Taiwan. The city isn't completely lively(as seen in image above) so part of the town has been left abandoned such as some various aparment complexes and they are being slowly reclaimed by nature.</p>
+        
+        <table border=1>
+            <tr>
+                <td>Activity</td>
+                <td>Cost</td>
+                <td>Buisness</td>
+            </tr>
+            <tr>
+                <td>Exploring</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Climb Trees</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Camping</td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr>
+                <td>Take Photos</td>
+                <td>$2,800</td>
+                <td>Samsung</td>
+            </tr>
+            <tr>
+                <td>Flying There</td>
+                <td>$1,044</td>
+                <td>Air Canada</td>
+            </tr>
+        </table>
+        
+        <br><input id="backbutton" type=button value="<=== Back" style="font-size: 25px;" onClick="window.history.back()">
+    </div>
+</body>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>T3A4 Events</title>
+		<meta name="description" content="javascript, events, schoolwork, work, test"/>
+		<style>
+			body {
+				background: url("../../background.png"); /*#3E424A*/
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center;
+				font: 16px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+			}
+			
+			.backbutton {
+				position: fixed;
+				bottom: 20px;
+				left: 20px;
+				
+				color: #fff;
+				border: 2px solid #ffffff;
+				border-radius: 10px;
+				background: transparent;
+				font-weight: bold;
+				font-size: 14px;
+				letter-spacing: 2px;
+				padding: 13px 24px;
+				transition: color .2s linear, background-color .2s linear;
+			}
+			
+			.backbutton:hover {
+				background: #DEDEDE;
+				color: #000;
+			}
+		</style>
+		<script>
+			
+		</script>
+	</head>
+	
+	<body oncopy="window.alert('You tryna steal me webpage?')">
+		<h3 align=center><u>Events by Dakaro</u></h3>
+		
+		<div id="myOut" style="position:absolute; left:500px; top:100px; width:500px">Move Me</div>
+		<br><br>
+		
+		<table>
+			<tr>
+				<td></td>
+				<td><input type=button value="&#8593;" onclick="{document.all.myOut.style.top = parseInt(document.all.myOut.style.top)-20+'px'}"/></td>
+				<td></td>
+			</tr>
+			
+			<tr>
+				<td><input type=button value="&#8592;" onclick="{document.all.myOut.style.left = parseInt(document.all.myOut.style.left)-20+'px'}"/></td>
+				<td><input type=button value="&#10021;" onmousedown="{mouse_position()}"></td>
+				<td><input type=button value="&#8594;" onclick="{document.all.myOut.style.left = parseInt(document.all.myOut.style.left)+20+'px'}"/></td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td><input type=button value="&#8595;" onclick="{document.all.myOut.style.top = parseInt(document.all.myOut.style.top)+20+'px'}"/></td>
+				<td></td>
+			</tr>
+		</table>
+		
+		<img style="position:fixed; top:10px; left:550px; width:100px; height:100px" src="bootybone.gif">
+		
+		
+		
+		<br><b onMouseOver="{getElementById('myOut').innerHTML += ', Move me'}">CopyCat</b>
+		
+		
+		<input type=button class="backbutton" value="BACK" onclick="{window.history.back()}">
+	</body>
+</html>

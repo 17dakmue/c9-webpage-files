@@ -1,0 +1,65 @@
+<head>
+    <title>2D Arrays</title>
+    <style>
+        body{
+            font-family: helvetica;
+            text-align: center;
+            background: url('../background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .instructions{
+            background: RGBA(140,150,140,0.5);
+            padding: 3px;
+            width: 350px;
+            border-radius: 20px;
+            margin: 0 auto;
+            font-size: 10px;
+        }
+        input[id="userInput"]{
+            width: 600px;
+        }
+    </style>
+    <script>
+    var VALUES = [];
+    var TEMP = '';
+        
+    function PRINTVALUES(arrayName){
+        /*for(var a = 0; a < arrayName.length; a++){
+            for(var s = 0; s < arrayName[s].length; s++){
+                TEMP =+ arrayName[a][s] + ', ';
+                alert(TEMP);
+            }
+         }*/
+        document.getElementById('myDiv1').innerHTML = VALUES;
+    }
+    </script>
+</head>
+
+<body>
+<h1 align = center> 2D Arrays by Dakaro</h1>
+
+<div class="instructions">
+<h3>Instructions</h3>
+this is a really inefficient 2D array.<br>
+Pass: Use "for" loops to make it more efficient. <br>Good: allow the user to enter new values using textboxes.
+</div><br><br>
+
+
+<div id = "myDiv1">Results go here.</div>
+
+<input type=button value="Set Values" onclick="{
+      VALUES.push(['Fred' , 'Brown hair' , 'Green eyes']);
+      VALUES.push(['Tom' , 'Blond hair' , 'Brown eyes']);
+      VALUES.push(['Peter' , 'Red hair' , 'Blue eyes']);
+      }">
+        
+        
+<input type=button value='Print' onclick="{PRINTVALUES(VALUES);}"><br>
+
+<input type="textarea" id="userInput" placeholder="Add New values, Use a comma to start a new sub-value"/>
+<input type=button value="Push" onclick="{VALUES.push([document.getElementById('userInput').value])}">
+
+
+<br><br><input type=button value="Back" style="font-size:25px" onclick="{window.history.back()}"><br><br>

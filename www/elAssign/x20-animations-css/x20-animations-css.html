@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Animation</title>
+  <style>
+    body{
+      font-family: helvetica;
+      background: url('../../background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
+    }
+    .instructions{
+      background: RGBA(140,150,140,0.5);
+      padding: 3px;
+      width: 400px;
+      border-radius: 20px;
+      margin: 0 auto;
+      font-size: 10px;
+    }
+    #myDiv {
+      width:100px;
+      height:100px;
+      background:red;
+      position:relative;
+      -webkit-animation:myfirst 3s linear 1s infinite alternate;
+    }
+    
+    @-webkit-keyframes myfirst {
+      0%   {background:red; left:0px; top:0px;}
+      25%  {background:yellow; left:200px; top:0px;}
+      50%  {background:blue; left:200px; top:200px;}
+      75%  {background:green; left:0px; top:200px;}
+      100% {background:red; left:0px; top:0px;}
+    }
+  </style>
+</head>
+
+<body>
+  <input type=button value="Button activated CSS" style="font-size:15px;background-color:red;" onclick="{
+    location ='x20-advancedCSS.html'
+  }">
+  
+  <p style='width:400'><b>Note:</b> This CSS animations example has been optimized for Phonegap as does not include the standard format for non-chrome or safari browsers</p>
+  
+  
+  <div id="myDiv"></div>
+  
+  <input type=button value="Back" style="font-size:25px" onclick="{window.history.back()}"><br><br>
+</body>
+</html>

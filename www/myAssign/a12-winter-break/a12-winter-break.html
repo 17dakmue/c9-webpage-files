@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Winter break</title>
+		<style>
+			body {
+				background: url("../../background.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center;
+				
+				font-family: Helvetica;
+				text-align: left;
+				
+				background-image: url('snow.png'), url('snow3.png'), url('snow2.png');
+				
+				-webkit-animation: snow 20s linear infinite;
+				-moz-animation: snow 20s linear infinite;
+				-ms-animation: snow 20s linear infinite;
+				animation: snow 20s linear infinite;
+			}
+			
+			a {
+				color: RGB(30,30,40);
+			}
+			
+			table {
+				background: RGBA(100,200,200,0.5);
+				text-align: center;
+				margin: 0 auto;
+			}
+			
+			.list {
+				background: RGBA(0,100,100,0.5);
+				padding: 10px;
+				border: 2px solid Teal;
+				border-radius: 20px;
+				font-size: 12px;
+				width: 340px;
+				
+				
+				position: absolute;
+				left: 700px;
+				top: 100px;
+			}
+			
+			.myAni {   
+				position: relative;
+				-webkit-animation-name: myFirst;
+				-webkit-animation-duration:15s;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-timing-function: ease;
+				-webkit-animation-fill-mode: forwards;
+			}
+
+			@-webkit-keyframes myFirst {     
+				0%   {left:100px; top:-1450px;}
+				25%  {left:900px; top:-1450px;}
+				50%  {left:900px; top:-400px; -webkit-transform: scale(2) rotate(100deg); }
+				75%  {left:100px; top:-400px; -webkit-transform: rotate(250deg);}
+				100% {left:100px; top:-1450px;  -webkit-transform: rotate(360deg);}
+			}
+			
+			/*Keyframes*/
+			@keyframes snow {
+			0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+			100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+			}
+
+			@-moz-keyframes snow {
+			0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+			100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+			}
+			
+			@-webkit-keyframes snow {
+			0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+			50% {background-color:#b4cfe0;}
+			100% {background-position: 500px 1000px, 400px 400px, 300px 300px; background-color:#6b92b9;}
+			}
+			
+			@-ms-keyframes snow {
+			0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+			100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+			}
+			
+		</style>
+		<script>
+			/*TO-DO Javascripting functions*/
+		</script>
+	</head>
+	
+	<body>
+		<h2 align=Center title="Hey listen! H3h3 :33">Winter Break. H3h3h3 it's almost here :33</h1>
+		
+		
+		
+		<img src="snowmount.jpg" width=480 height=270 title="A snowy mountain in the Winter" onclick=""></img>
+		
+		<table border=1>
+			<tr style="width:20%;">
+				<td></td>
+				<td>A good combo of videos to relax to</td>
+			</tr>
+			<tr>
+				<td>Fireplace</td>
+				<td><iframe width="640" height="360" src="http://www.youtube.com/embed/eyU3bRy2x44" frameborder="0" allowfullscreen></iframe></td>
+			</tr>
+			<tr>
+				<td>Smooth Jazz</td>
+				<td><iframe width="640" height="360" src="http://www.youtube.com/embed/HMnrl0tmd3k" frameborder="0" allowfullscreen></iframe></td>
+			</tr>
+			<tr>
+				<td>Some rain :33</td>
+				<td><iframe width="640" height="360" src="http://www.youtube.com/embed/mQ9OWMsJBTk" frameborder="0" allowfullscreen></iframe></td>
+			</tr>
+		</table>
+		<div class="list">
+			<b><i><u>Things</u></i> I want or <i><u>places</u></i> I want to go to for winter break.</b>
+			<ul>
+				<li>Things I want for Christmas</li>
+				<ol>
+					<li><a href="http://www.whatpumpkin.com/God-Tier-Pullover-Hoodies/" target="_blank">God Tier hoodie</a></li>
+					<li><a href="http://www.pokemonrubysapphire.com/en-us/" target="_blank">Pokemon Omega Ruby or Alpha Sapphire</a></li>
+					<li><a href="http://www.oculus.com/" target="_blank">Oculus Rift</a></li>
+				</ol>
+				<li>Places I would want to go but cannot afford</li>
+				<ol>
+					<li><a href="http://www.jnto.go.jp/eng/" target="_blank">Japan</a></li>
+					<li><a href="http://www.gohawaii.com/" target="_blank">Hawaii</a></li>
+					<li><a href="https://sweden.se/" target="_blank">Sweden</a></li>
+					<li><a href="http://www.germany.travel/en/index.html" target="_blank">Germany</a></li>
+					<li><a href="http://www.lonelyplanet.com/thailand" target="_blank">Thailand</a></li>
+				</ol>
+			</ul>
+		</div>
+		<svg class="myAni" width=80 height=150>
+			<circle cx=40 cy=110 r=40 stroke="black" stroke-width="1" fill="white"/>
+			<circle cx=40 cy=70 r=30 stroke="black" stroke-width="1" fill="white"/>
+			<circle cx=40 cy=35 r=20 stroke="black" stroke-width="1" fill="white"/>
+			<rect width="45" height="8" x=17 y=15 style="fill:black; stroke-width:0;"/>
+			<rect width="25" height="20" x=27 y=0 style="fill:black; stroke-width:0;"/>
+			<circle cx=32 cy=32 r=2 stroke-width="0" fill="black"/>
+			<circle cx=47 cy=32 r=2 stroke-width="0" fill="black"/>
+			<polygon points="37,37 37,42 57,40" fill="orange"/>
+		</svg>
+		
+		<br><br><input type="button" value="<=== Back" onClick="{window.history.back()}" style="font-size:20px;"/>
+	</body>
+</html>

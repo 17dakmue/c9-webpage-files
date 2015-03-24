@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: helvetica;
+            text-align: center;
+            background: url('../../background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .number {
+            width: 80px;
+        }
+        .Calculator{
+            background: RGBA(140,150,140,0.5);
+            padding: 20px;
+            width: 450px;
+            height: 100px;
+            border-radius: 20px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function add(a,x){
+            return parseInt(a) + parseInt(x);
+        }
+        
+        function subtract(a,x){
+            return parseInt(a) - parseInt(x);
+        }
+        
+        function multiply(a,x){
+            return parseInt(a) * parseInt(x);
+        }
+        
+        function divide(a,x){
+            return parseInt(a) / parseInt(x);
+        }
+        function log(){
+            
+        }
+        
+        function finish(){
+            var HOLDER= "";
+            if(document.getElementById('selFunc').value == "add"){
+                HOLDER = add(document.getElementById('num1').value, document.getElementById('num2').value);
+            }
+            if(document.getElementById('selFunc').value == "subtract"){
+                HOLDER = subtract(document.getElementById('num1').value, document.getElementById('num2').value);
+            }
+            if(document.getElementById('selFunc').value == "multiply"){
+                HOLDER = multiply(document.getElementById('num1').value, document.getElementById('num2').value);
+            }
+            if(document.getElementById('selFunc').value == "divide"){
+                HOLDER = divide(document.getElementById('num1').value, document.getElementById('num2').value);
+            }
+            if(document.getElementById('selFunc').value == "square"){
+                HOLDER = Math.pow(document.getElementById('num1').value, document.getElementById('num2').value);
+            }
+            if(document.getElementById('selFunc').value == "root"){
+                document.getElementById('num2').value = "Use first box!";
+                HOLDER = Math.sqrt(document.getElementById('num1').value);
+            }
+            
+            if(isNaN(HOLDER) === true){
+                HOLDER = "Use Numbers!";
+            }
+            document.getElementById('placeholder').innerHTML = HOLDER;
+            log();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Calculator by Dakaro</h1>
+    <p>A calculator created in Javascript and interacted with using HTML.</p>
+    
+    
+    <div class="Calculator">
+    <input class="number" id="num1" type="textarea" placeholder="Number 1" value=""/>
+    
+    <select id="selFunc" name="Function">
+        <option value="add">Addition</option>
+        <option value="subtract">Subtraction</option>
+        <option value="multiply">Multiplication</option>
+        <option value="divide">Division</option>
+        <option value="root">Square Root</option>
+        <option value="square">x^Y</option>
+    </select>
+    
+    <input class="number" id="num2" type="textarea" placeholder="Number 2" value=""/>
+    
+    <input type=button value=" = " onclick="{finish()}"/><br>
+    
+    <div id="placeholder" style="margin:20px; font-size:35px; font-family:impact;"></div>
+    </div>
+    
+    <br><input id="backbutton" type=button value="<=== Back" style="font-size: 25px;" onClick="window.history.back()">
+</body>

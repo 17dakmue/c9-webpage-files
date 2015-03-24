@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced CSS Animation</title>
+    <style> 
+        body{
+            font-family: helvetica;
+            background: url('../../background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .instructions{
+            background: RGBA(140,150,140,0.5);
+            padding: 3px;
+            width: 400px;
+            border-radius: 20px;
+            margin: 0 auto;
+            font-size: 10px;
+        }
+        #myDiv1 {   
+            width:100px;
+            height:100px;
+            background:red;
+            position:relative;
+        }
+        #myDiv2 {   
+            width:100px;
+            height:100px;
+            background:red;
+            position:relative;
+        }
+
+        .myAni {   
+            -webkit-animation-name: myFirst;
+            -webkit-animation-duration:1.1s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-fill-mode: forwards;
+        }
+        
+        .myAni2 {
+            -webkit-animation-name: mySecond;
+            -webkit-animation-duration:1s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-fill-mode: forwards;
+        }
+        
+        @-webkit-keyframes myFirst {     
+            0%   {background:red;   left:0px; top:0px; opacity: 1;}
+            5%   {background:green;}
+            10%  {background:yellow;}
+            15%  {background:purple;}
+            20%  {background:blue;}
+            25%  {background:red; left:530px; top:15px; opacity: 0.4;}
+            30%  {background:green;}
+            35%  {background:yellow;}
+            40%  {background:purple;}
+            45%  {background:blue;}
+            50%  {background:red;  left:200px; top:423px; opacity: 1; -webkit-transform: scale(2.1) rotate(180deg); }
+            55%  {background:green;}
+            60%  {background:yellow;}
+            65%  {background:purple;}
+            70%  {background:blue;}
+            75%  {background:red;  left:3px; top:200px; opacity: 0.4; -webkit-transform: scale(0.3) rotate(360deg);}
+            80%  {background:green;}
+            85%  {background:yellow;}
+            90%  {background:purple;}
+            95%  {background:blue;}
+            100% {background:red;    left:0px; top:0px; }
+        }
+        
+        @-webkit-keyframes mySecond {     
+            0%   {background:red;   left:1060px; top:-100px; opacity: 1;}
+            5%   {background:green;}
+            10%  {background:yellow;}
+            15%  {background:purple;}
+            20%  {background:blue;}
+            25%  {background:red; left:530px; top:-85px; opacity: 0.4;}
+            30%  {background:green;}
+            35%  {background:yellow;}
+            40%  {background:purple;}
+            45%  {background:blue;}
+            50%  {background:red;  left:860px; top:323px; opacity: 1; -webkit-transform: scale(2.1) rotate(180deg); }
+            55%  {background:green;}
+            60%  {background:yellow;}
+            65%  {background:purple;}
+            70%  {background:blue;}
+            75%  {background:red;  left:1057px; top:100px; opacity: 0.4; -webkit-transform: scale(0.3) rotate(360deg);}
+            80%  {background:green;}
+            85%  {background:yellow;}
+            90%  {background:purple;}
+            95%  {background:blue;}
+            100% {background:red;    left:1060px; top:-100px; }
+        }
+        
+        /*@-webkit-keyframes myFirst {     
+            0%   {background:red;   left:0px; top:0px;}
+            25%  {background:yellow; left:200px; top:0px; opacity: 0.3;}
+            50%  {background:blue;  left:200px; top:200px; -webkit-transform: scale(2.1) rotate(180deg); }
+            75%  {background:green;  left:0px; top:200px;}
+            100% {background:red;    left:0px; top:0px; }
+        }*/
+    </style>
+</head>
+
+<body>
+    <p><b>Note:</b> This CSS animations example has been optimized for Phonegap and does not include the standard format for non-chrome or safari browsers</p>
+
+    <div id="myDiv1"><img src="troll.png" width=100 height=80></div>
+    <div id="myDiv2"><img src="troll.png" width=100 height=80></div>
+    
+    
+    <input id="myGoButton" type=button value='Go' onclick="{
+        if (document.getElementById('myGoButton').value == 'Go') {
+           document.getElementById('myDiv1').className = 'myAni';
+           document.getElementById('myDiv2').className = 'myAni2';
+           document.getElementById('myGoButton').value= 'Running'
+        }
+        else if(document.getElementById('myGoButton').value == 'Running'){
+            document.getElementById('myDiv1').className = 'myAniNot';
+            document.getElementById('myDiv2').className = 'myAniNot';
+            document.getElementById('myGoButton').value = 'Go';
+        }
+    }">
+
+    <br><br>
+    <input type=button value="Back" style="font-size:25px" onclick="{window.history.back()}"><br><br>
+</body>
+</html>
+
+
+
+
+<!--
+<input id="myGoButton" type=button value='Go' onclick="{
+   if (document.getElementById('myGoButton').value == 'Go') {
+       document.getElementById('myDiv1').className = 'myAni';
+       setTimeout(function() {
+           document.getElementById('myDiv1').className ='myAniNot';
+           document.getElementById('myGoButton').value= 'Go'
+       }, 4000);
+       document.getElementById('myGoButton').value= 'Running'
+   }
+}">-->

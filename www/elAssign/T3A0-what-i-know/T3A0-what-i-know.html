@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+	<title>Web page design overview</title>
+	<style>
+		body {
+			background: url("../../background.jpg");
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			font: 16px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+		}
+		
+		h1 {
+			font-size: 20px;
+			text-decoration: underline;
+			font-weight: lighter;
+		}
+		
+		.container {
+			background: white;
+			margin: 30px auto;
+			padding: 5px 10px;
+			width: 700px;
+			border-radius: 15px;
+		}
+		
+		.backbutton {
+			position: fixed;
+			bottom: 20px;
+			left: 20px;
+			
+			color: #fff;
+			border: 2px solid #ffffff;
+			border-radius: 10px;
+			background: transparent;
+			font-weight: bold;
+			font-size: 14px;
+			letter-spacing: 2px;
+			padding: 13px 24px;
+			transition: color .2s linear, background-color .2s linear;
+		}
+		
+		.backbutton:hover {
+			background: #DEDEDE;
+			color: #000;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 align=center>"Mobile App" and Web Design Semester overview</h1>
+		<p>Over the first Semester of <b>Mobile app</b> and Web design all we have done is learn html with basic CSS and some Javascripting. So far I'm pretty sure I have a different definition of how to make Mobile apps other than using html to make games. Although knowing how to make <i>games</i> in html is nice it's not what I expected.</p>
+		<ul><b>Things I have learned</b>
+			<li>How to use basic HTML and some more complex html</li>
+			<li>How to use some basic CSS to actually make those pages ~20% cooler</li>
+			<li>A bit of Javascripting</li>
+		</ul>
+		<p>We obviously have worked on <i>some</i> other things but we have either not gone very into depth about them or we only did them in the background or just worked on them for a single day.</p>
+		<ul><b>Things I wish to learn but most likely not</b>
+			<li>How to legitimately make an app instead of relying on an HTML api/converter</li>
+			<li>Fancy/Efficient CSS with smooth animations</li>
+			<li>How to make your webpage more efficient with HTTP requests/how to make proper CSS stylesheets for your overall webpage</li>
+		</ul>
+	</div>
+	
+	<input type=button class="backbutton" value="BACK" onclick="{window.history.back()}">
+</body>

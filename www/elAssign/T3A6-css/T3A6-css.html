@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>T3A6 Css</title>
+		<meta name="author" content="Dakaro">
+		<meta name="description" content="The three different types of CSS in html">
+		<meta name="keywords" content="css,html,3,ways">
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link rel="stylesheet" href="T3A6-css.css" type="text/css">
+		<style type="text/css">
+			.backbutton {
+				position: fixed;
+				bottom: 20px;
+				left: 20px;
+				
+				color: #fff;
+				border: 2px solid #ffffff;
+				border-radius: 10px;
+				background: transparent;
+				font-weight: bold;
+				font-size: 14px;
+				letter-spacing: 2px;
+				padding: 13px 24px;
+				transition: color .2s linear, background-color .2s linear;
+			}
+			
+			.backbutton:hover {
+				background: #DEDEDE;
+				color: #000;
+			}
+			
+			b {
+				font-size: 40px;
+			}
+			
+			#italics {
+				font-size: 12px;
+				color: blue;
+			}
+			
+			@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+				.backbutton, .backbutton:hover {
+					color: black;
+					border: 2px solid black;
+				}
+			}
+		</style>
+		<script>
+			
+		</script>
+	</head>
+	
+	<body>
+		<h1 align=center><u>This is using <b>Three</b> types of CSS</u></h1>
+		<div class="container">
+			<p><b>Hi</b>, This is not bolded.</p>
+			
+			<p><b style="background-color:green; padding:3px; border-radius:10px;">Nice</b></p>
+			
+			<p><i id="italics">Wow, italics</i></p>
+		</div>
+
+		<input type=button class="backbutton" value="BACK" onclick="window.history.back()">
+	</body>
+</html>

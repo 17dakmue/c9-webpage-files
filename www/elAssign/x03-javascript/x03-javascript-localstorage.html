@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Local Storage</title>
+      <base target="_blank"/>
+      <style>
+         body {
+				background: url("../../background.png"); /*#3E424A*/
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center;
+				font: 16px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+			}
+			
+			.backbutton {
+				position: fixed;
+				bottom: 20px;
+				left: 20px;
+				
+				color: #fff;
+				border: 2px solid #ffffff;
+				border-radius: 10px;
+				background: transparent;
+				font-weight: bold;
+				font-size: 14px;
+				letter-spacing: 2px;
+				padding: 13px 24px;
+				transition: color .2s linear, background-color .2s linear;
+			}
+			
+			.backbutton:hover {
+				background: #DEDEDE;
+				color: #000;
+			}
+      </style>
+      <script>
+         function storeText(storeName, myId){
+            localStorage.setItem(storeName, document.getElementById(myId).value);
+            alert(document.getElementById(myId).value + ' \nWas Stored');
+         }
+         
+         function retrieveText(storeName, myId){
+            document.getElementById(myId).value = localStorage.getItem(storeName);
+            alert(document.getElementById(myId).value + ' \nWas Retrieved.');
+         }
+      </script>
+   </head>
+   
+   <body onload="{
+      myStorage = localStorage.getItem('myStoredText')
+      if(myStorage != null){
+         document.getElementById('myText1').value = myStorage
+      }
+      }" onunload="{
+         localstorage.setItem('myStoredText',document.getElementById('myText1').value)
+   }">
+
+      <input id="myText1" type=text size=70 value="Write stuff here to be stored for the next time you come back to this site"><br>
+      <input type="button" value="Store Text" onClick="storeText('myStoredText', 'myText1')">
+      <input type="button" value="Retrieve Text" onClick="retrieveText('myStoredText', 'myText1')"> 
+      
+      <input type=button class="backbutton" value="Back" onclick="{window.history.back()}">
+   </body>
+</html>

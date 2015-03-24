@@ -1,0 +1,119 @@
+<head>
+    <title>CSS</title>
+    <style>
+    .Navbar {
+        float: left;
+    }
+    
+    .Navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 5px;
+    }
+
+    .Navbar a:link, a:visited {
+        display: block;
+        font-weight: bold;
+        color: #FFFFFF;
+        background-color: #00CC66;
+        width: 120px;
+        text-align: center;
+        padding: 4px;
+        margin: 3 0 0 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: Verdana;
+        border-radius: 10px;
+    }
+
+    .Navbar a:hover, a:active {
+        background-color: #008F47;
+        color: #E6E6E6;
+    }
+    
+    .TEXTBOX_1 {
+        background-image: url(http://cdn.osxdaily.com/wp-content/uploads/2013/07/dancing-banana.gif);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        font-family: verdana;
+    }
+    
+    .container {
+		background: RGBA(140,150,140,0.5);
+        padding: 5px;
+        width: 750px;
+        border-radius: 20px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    body {
+        background: url(../../background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family:verdana
+    }
+    
+    #BOLD_1 {
+        width: 50px;
+        color: red;
+        background-color: blue;
+    }
+       
+    #BORING_1 {
+        width: 100px;
+        margin: 0 auto;
+        border-style: ridge;
+        border-width: 8px;
+        border-color: olive;
+        background-color: green;
+        border-radius: 10px;
+    }
+       
+    #backbutton {
+        width: auto;
+        border-radius: 10px;
+        border-style: outset;
+        border-width: 5px;
+        background-color: #30D683;
+        border-color: #00CC66;
+    }
+    </style>
+    <script>
+        function MouseOver() {
+            document.getElementById('my1').style.left = parseInt(document.getElementById('my1').style.left) + 20 + 'px'
+        }
+    </script>
+</head>
+
+
+<body>
+    <div class="NavBar">
+        <ul>
+            <li><a href="../../index.html">Index</a></li>
+            <li><a href="../../about.html">About</a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="container">
+        <b id="BOLD">This is BOLD</b><br>
+        
+        <b id="BOLD_1">This is boldly colored</b>
+        
+        <div id="BORING">This is a boring div</div>
+        <div id="BORING_1">This is less a boring div</div>
+        
+        <textarea class="TEXTBOX_1" rows=45 cols=45>I can write on this picture.</textarea><br>
+        
+        <a id="link" href="http://firstperson.is/#!/">A really good CSS Website I barely understand</a><br><br>
+    </div>
+    
+    <input id="backbutton" type=button value="<=== Back" style="font-size: 25px;" onClick="window.history.back()">
+    
+    <b id="my1" style="position: absolute; left:400px; top:400px; width:100px" onMouseMove="MouseOver()"> Click here </b>
+</body>
+

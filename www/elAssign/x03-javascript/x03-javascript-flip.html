@@ -1,0 +1,46 @@
+<head>
+    <title>Javascript Flip</title>
+    <style>
+        body{
+            font-family: helvetica;
+            background: url('../../background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center;
+        }
+        .instructions{
+            background: RGBA(140,150,140,0.5);
+            padding: 3px;
+            width: 400px;
+            border-radius: 20px;
+            margin: 0 auto;
+            font-size: 10px;
+        }
+    </style>
+    <script>
+        function flip(){
+            if(document.getElementById('myButton1').value == 'On'){
+                document.getElementById('myButton1').value = 'Off';
+            }
+            else if(document.getElementById('myButton1').value == 'Off'){
+                document.getElementById('myButton1').value = 'On';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Javascript conditional script</h1>
+    
+    <div class="instructions">
+    <h2>Instructions</h2>
+    Write code to flip the name on the button to first say "off" then when you click it to say "on" then "off" again
+    </div><br>
+    
+    <input id="myButton1" type=button value="Off" onclick="{ flip() }">
+    
+    
+    
+    <br><br><input type=button value="Back" style="font-size:25px" onclick="{window.history.back()}"><br><br>
+</body>

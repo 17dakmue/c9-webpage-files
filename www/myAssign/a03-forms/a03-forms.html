@@ -1,0 +1,54 @@
+<title>Forms</title>
+<style>
+    body {
+      background: url(background.jpg);
+      background-repeat: no-repeat; 
+      background-size: 100% 100%; 
+      font-family: verdana;
+    }
+    #backbutton {
+      width: 120px;
+      border-radius: 10px;
+      border-style: outset;
+      border-width: 5px;
+      background-color: #30D683;
+      border-color: #00CC66;
+    }
+</style>
+<html>
+<body>
+	<font-style="text-size:25px; font-family: verdana;">
+	<h1>Forms by Dakaro</h1>
+
+	<h3>Instructions</h3>
+	Make a form that a buisness would use to collect information about the customers(note the form will not do anything just look fancy)<br>
+	Pass: Change the following about a buisness
+	Excellent: Quantity and quality make it fancy<br><br><br>
+  
+  
+  
+	<form name="theForm" method="POST" action="http://142.33.222.23/ellis/form6.php"> 
+	Text <input name="text1" type=text value="Some Text"><br>
+	Checkbox <input name="myCheck1" type="checkbox" value="firstCheck"><br>
+	Checkbox <input name="myCheck2" type="checkbox" value="firstCheck45"><br>
+	Male <input name="myRadio" type="radio" value="MaleCheck"><br>
+	Female <input name="myRadio" type="radio" value="FemaleCheck"><br>
+	
+	<textarea name="Area1" rows=4 cols=70 wrap>So writing inside this box...</textarea><br>
+	
+	<select name="select1" size=1>
+		<option value="Blank">
+		<option value="First">The First Thing
+		<option value="Second">The Second Thing
+	</select><br>
+	
+	Button <input type=button value="Click Me" onClick="alert('You clicked me!')">
+	Submit <input type=submit>
+		
+	Reset <input type=reset>
+	
+	</form>
+	<br><input id="backbutton" type=button value="<=== Back" style="font-size: 25px; width: auto;" onClick="window.history.back()"><br>
+	<b style="display:none;">I'm not here :3</b>
+	</font>
+</body> <!--http://cancode-php-156279.usw1.nitrousbox.com/form6.php-->

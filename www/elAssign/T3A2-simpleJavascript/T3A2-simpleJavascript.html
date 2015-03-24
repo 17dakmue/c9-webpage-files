@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple Javascript</title>
+		<meta name="description" content="simple, javascript, dont open"/>
+		<style>
+			body {
+				font-family: "Comic Sans MS";
+			}
+			
+			img {
+				display: block;
+				margin: 0 auto;
+			}
+		</style>
+		<script>
+			var x;
+			var color;
+			
+			function changecolors() {
+			    x = 1;
+			    setInterval(change, 1000);
+			}
+			
+			function change() {
+			    if (x === 1) {
+			        color = "red";
+			        x = 2;
+			    } else {
+			        color = "green";
+			        x = 1;
+			    }
+			    document.body.style.background = color;
+			}
+		</script>
+	</head>
+	
+	<body onload="changecolors()">
+		<h1 align=center>OP IS BEAUTIFUL</h1>
+		<br>
+		<img src="http://www.tikihumor.com/wp-content/uploads/sites/37/2012/12/never-fear-OP-is-here.jpg" alt="OP is beautiful" onClick="window.history.back()">
+	</body>
+</html>
