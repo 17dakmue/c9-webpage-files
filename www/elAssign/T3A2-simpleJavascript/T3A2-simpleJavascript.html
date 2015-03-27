@@ -36,8 +36,27 @@
 	</head>
 	
 	<body onload="changecolors()">
-		<h1 align=center>OP IS BEAUTIFUL</h1>
-		<br>
-		<img src="http://www.tikihumor.com/wp-content/uploads/sites/37/2012/12/never-fear-OP-is-here.jpg" alt="OP is beautiful" onClick="window.history.back()">
+		<div>
+			<h1 align=center>OP IS BEAUTIFUL</h1><br>
+			
+			<img src="http://www.tikihumor.com/wp-content/uploads/sites/37/2012/12/never-fear-OP-is-here.jpg" alt="OP is beautiful/Click for back" onClick="window.history.back()">
+			
+			<p>This is the time:</p>
+			<script>
+				var myOld = new Date().getTime();
+				document.writeln('<font color=aqua>' + myOld + ' is the current time in milliseconds(?)</font>');
+			</script>
+			<p>This is better:
+			<script>
+				for(var myLoop=1; myLoop<=1000; myLoop++) {
+					if(myLoop==587){
+						document.writeln('<font color=aqua>' + myLoop + ' wow' + '<br></font>');
+					}
+					else{
+						document.writeln(myLoop + ' wow' + '<br>');
+					}
+				}
+			</script></p>
+		</div>
 	</body>
 </html>
