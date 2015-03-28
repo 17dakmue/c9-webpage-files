@@ -48,14 +48,20 @@
 			</script>
 			<p>This is better:
 			<script>
+				myOld = new Date().getTime();
 				for(var myLoop=1; myLoop<=1000; myLoop++) {
 					if(myLoop==587){
-						document.writeln('<font color=aqua>' + myLoop + ' wow' + '<br></font>');
+						document.writeln('<font color=aqua>' + myLoop + ' wow</font>');
+					}
+					if(myLoop%2){
+						document.writeln(myLoop + ' wow<br>')
 					}
 					else{
-						document.writeln(myLoop + ' wow' + '<br>');
+						document.writeln(myLoop + ' wow');
 					}
 				}
+				myNow = new Date().getTime();
+				document.writeln('<br>MayMay Delay = ' + eval(myNow - myOld) + 'ms');
 			</script></p>
 		</div>
 	</body>
