@@ -1,5 +1,4 @@
 body {
-	padding:0px;
 	background: #ffe url('../fade.png') top repeat-x;
     color: #800;
 	font: 13px/1.231 arial,helvetica,clean,sans-serif;
@@ -7,7 +6,8 @@ body {
 
 
 .nav {
-	position: fixed;
+	position: absolute;
+	top: 0; bottom: 0; top: 0;
 	max-width:200px;
 	margin-left:5px;
 	margin-top:5px;
@@ -31,7 +31,7 @@ body {
 	padding-bottom:.5em;
 }
 
-.boxbar{
+.boxbar {
 	padding-left:.5em;
 	line-height:2em;
 	position:relative;
